@@ -186,6 +186,7 @@ quit_running_app() {
 }
 
 install_app() {
+    "$SCRIPT_DIR/sign-local.sh" "$APP" || return $?
     rm -rf "$DEST" || return $?
     mv "$APP" "$DEST"
 }

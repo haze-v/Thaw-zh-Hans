@@ -26,6 +26,8 @@ the items under New and Fixed.
 
 ### Changed
 
+- Use a fixed local keychain certificate for local installs and refuse to install if that certificate is unavailable. Private keys stay outside the repository.
+
 - Show the latest upstream version for the selected channel in About, with a fetch-and-merge reminder for Chinese builds and an explicit retry on network failures.
 
 - Expanded the Simplified Chinese interface translation, including layout, overflow and the Thaw Bar.
