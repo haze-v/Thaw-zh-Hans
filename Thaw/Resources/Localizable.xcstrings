@@ -1,6 +1,106 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Upstream version" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上游版本"
+          }
+        }
+      }
+    },
+    "Current version: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前版本：%@"
+          }
+        }
+      }
+    },
+    "Latest upstream version: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上游最新版本：%@"
+          }
+        }
+      }
+    },
+    "Checking upstream releases…" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在检查上游版本…"
+          }
+        }
+      }
+    },
+    "Could not check upstream releases. Try again later." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法检查上游版本，请稍后重试。"
+          }
+        }
+      }
+    },
+    "New upstream release: fetch and merge it into your Chinese branch." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上游有新版本，请拉取并合并到汉化分支。"
+          }
+        }
+      }
+    },
+    "No newer upstream release in this channel." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前频道暂无更新的上游版本。"
+          }
+        }
+      }
+    },
+    "Refresh upstream version" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新上游版本"
+          }
+        }
+      }
+    },
+    "View upstream releases" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看上游发布"
+          }
+        }
+      }
+    },
+    "Checks official GitHub releases when this page opens. Merge upstream changes before rebuilding the Chinese version." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开本页时检查官方 GitHub 发布。请合并上游改动后重新构建汉化版。"
+          }
+        }
+      }
+    },
     "Show welcome screens again" : {
       "comment" : "",
       "localizations" : {

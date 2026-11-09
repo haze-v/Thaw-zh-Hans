@@ -26,6 +26,8 @@ the items under New and Fixed.
 
 ### Changed
 
+- Show the latest upstream version for the selected channel in About, with a fetch-and-merge reminder for Chinese builds and an explicit retry on network failures.
+
 - Expanded the Simplified Chinese interface translation, including layout, overflow and the Thaw Bar.
 
 ### Fixed

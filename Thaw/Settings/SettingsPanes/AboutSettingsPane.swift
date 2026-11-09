@@ -32,6 +32,7 @@ struct AboutSettingsPane: View {
         ScrollView {
             VStack(spacing: 24) {
                 identity
+                UpstreamReleaseStatusView(channel: updatesManager.updateChannel)
                 updates
                 actions
                 footer
