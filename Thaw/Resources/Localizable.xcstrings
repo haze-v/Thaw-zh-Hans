@@ -1,6 +1,3009 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Show welcome screens again" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新显示欢迎界面"
+          }
+        }
+      }
+    },
+    "Checking asks %@ whether a newer version exists. Downloading also fetches it in the background; without it, the download starts only after you accept an update. The release notes shown with an update come from the same server." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新会询问 %@ 是否有新版本。启用下载后还会在后台下载更新；否则，只有你接受更新后才开始下载。更新说明也来自同一服务器。"
+          }
+        }
+      }
+    },
+    "All Displays" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有显示器"
+          }
+        }
+      }
+    },
+    "Inside the Shape" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "形状内部"
+          }
+        }
+      }
+    },
+    "Behind the Shape" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "形状后方"
+          }
+        }
+      }
+    },
+    "Angle" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "角度"
+          }
+        }
+      }
+    },
+    "0° runs top to bottom, 90° left to right" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0° 为从上到下，90° 为从左到右"
+          }
+        }
+      }
+    },
+    "%lld°" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld°"
+          }
+        }
+      }
+    },
+    "When an icon changes" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标变化时"
+          }
+        }
+      }
+    },
+    "Displays & Spaces" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示器与空间"
+          }
+        }
+      }
+    },
+    "Settings for each display and Space" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各显示器和桌面空间的设置"
+          }
+        }
+      }
+    },
+    "Triggers, other apps and scripts" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "触发规则、其他应用和脚本"
+          }
+        }
+      }
+    },
+    "Show items while an app runs" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用运行时显示图标"
+          }
+        }
+      }
+    },
+    "Off, Check only, or Check and download. Checking asks the update server whether a newer version exists." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭、仅检查或检查并下载。检查更新会询问更新服务器是否有新版本。"
+          }
+        }
+      }
+    },
+    "Show menu bar background is on" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“显示菜单栏背景”已开启"
+          }
+        }
+      }
+    },
+    "macOS draws its own background under the menu bar, which covers this look. Turn it off to see your changes." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 会在菜单栏下方绘制自己的背景，遮住此外观。关闭该选项后即可看到更改。"
+          }
+        }
+      }
+    },
+    "Open Menu Bar Settings" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开菜单栏设置"
+          }
+        }
+      }
+    },
+    "Download" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下载"
+          }
+        }
+      }
+    },
+    "Leave Simple Mode and show every settings page" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出简洁模式并显示全部设置页面"
+          }
+        }
+      }
+    },
+    "Puts Thaw icons in place of Focus, AirDrop, Now Playing, Fast User Switching, Time Machine and the Input menu, so you can move or hide them." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Thaw 图标替代专注模式、隔空投送、正在播放、快速用户切换、时间机器和输入菜单，以便移动或隐藏它们。"
+          }
+        }
+      }
+    },
+    "Hidden items stay hidden while you share your screen or mirror a display." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共享屏幕或镜像显示器时，隐藏的图标仍保持隐藏。"
+          }
+        }
+      }
+    },
+    "When the menu bar is full, move the Visible items that don’t fit into Hidden and open them from the %@ Bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏放不下时，将“显示”区域中放不下的图标移入“隐藏”区域，并通过 %@ 工具栏打开。"
+          }
+        }
+      }
+    },
+    "Native keeps Live Activities, the camera indicator and Apple’s own items on the menu bar. Standard hides any app’s items, and Clock, Control Center and Siri too." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生方式保留实时活动、摄像头指示灯和 Apple 系统图标。标准方式可隐藏任何应用的图标，以及时钟、控制中心和 Siri。"
+          }
+        }
+      }
+    },
+    "Apple’s items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 系统图标"
+          }
+        }
+      }
+    },
+    "Hide items while presenting" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演示时隐藏图标"
+          }
+        }
+      }
+    },
+    "Show an item when its icon changes" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标变化时显示该项"
+          }
+        }
+      }
+    },
+    "Overflow and previews" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "溢出与预览"
+          }
+        }
+      }
+    },
+    "Hiding method" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏方式"
+          }
+        }
+      }
+    },
+    "Hiding" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏"
+          }
+        }
+      }
+    },
+    "Restore these visibility settings?" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复这些可见性设置？"
+          }
+        }
+      }
+    },
+    "Skip recovery?" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过恢复？"
+          }
+        }
+      }
+    },
+    "Restore missing menu bar items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复缺失的菜单栏图标"
+          }
+        }
+      }
+    },
+    "Normal hiding is stopped in this window. Recovery changes app visibility only, not your saved layout or positions." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此窗口打开时会暂停常规隐藏。恢复仅更改应用的可见性，不会更改已保存的布局或位置。"
+          }
+        }
+      }
+    },
+    "Recorded changes to restore" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待恢复的变更记录"
+          }
+        }
+      }
+    },
+    "No other apps are available for recovery. If an item is still missing, check its switch in System Settings → Menu Bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有其他可恢复的应用。如果图标仍缺失，请检查“系统设置 → 菜单栏”中的对应开关。"
+          }
+        }
+      }
+    },
+    "Other disabled apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他已停用的应用"
+          }
+        }
+      }
+    },
+    "Thaw has no recovery record for these apps. Select only the ones you want to allow in the menu bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thaw 没有这些应用的恢复记录。请仅选择你希望允许显示在菜单栏中的应用。"
+          }
+        }
+      }
+    },
+    "Recovery records are kept until the visibility settings are verified. You can also enable the affected apps in System Settings." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复记录会保留到可见性设置验证完成。你也可以在系统设置中启用受影响的应用。"
+          }
+        }
+      }
+    },
+    "Checking menu bar visibility…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在检查菜单栏可见性…"
+          }
+        }
+      }
+    },
+    "Quit Recovery" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出恢复"
+          }
+        }
+      }
+    },
+    "Skip Recovery…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过恢复…"
+          }
+        }
+      }
+    },
+    "Check Again" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新检查"
+          }
+        }
+      }
+    },
+    "Restore Visibility…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复可见性…"
+          }
+        }
+      }
+    },
+    "Restore Visibility" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复可见性"
+          }
+        }
+      }
+    },
+    "Restore recorded states and enable the apps you selected. Your saved layout and positions will not be changed. Native hiding stays off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复记录中的状态，并启用所选应用。已保存的布局和位置不会更改。原生隐藏将保持关闭。"
+          }
+        }
+      }
+    },
+    "Skip Recovery" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过恢复"
+          }
+        }
+      }
+    },
+    "Thaw will keep the recovery records as backups and continue with Native hiding off. Some apps may remain hidden. Your saved layout and positions will not be changed." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thaw 会保留恢复记录作为备份，并在关闭原生隐藏的情况下继续运行。部分应用可能仍被隐藏。已保存的布局和位置不会更改。"
+          }
+        }
+      }
+    },
+    "The previous recovery records are kept at:" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "之前的恢复记录保存在："
+          }
+        }
+      }
+    },
+    "How large items are in the %@ Bar. At 100%% they match the menu bar; smaller sizes fit more items in a row." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 工具栏中图标的大小。100%% 时与菜单栏一致；缩小后每行可容纳更多图标。"
+          }
+        }
+      }
+    },
+    "Item size" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标大小"
+          }
+        }
+      }
+    },
+    "%@ didn’t stay in %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 未能留在 %@ 中"
+          }
+        }
+      }
+    },
+    "Couldn’t move %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法移动 %@"
+          }
+        }
+      }
+    },
+    "Takes effect when this display is the active menu bar display. Applying it writes the new value without restarting apps; each app picks it up the next time it starts, and each app can add its own padding, so gaps are not always identical." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此显示器作为当前菜单栏显示器时生效。应用设置会写入新值，但不会重启应用；各应用下次启动时才会采用新值，而且可能有自己的边距，因此间距不一定完全一致。"
+          }
+        }
+      }
+    },
+    "Apps pick up the new spacing the next time they start" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用将在下次启动时采用新间距"
+          }
+        }
+      }
+    },
+    "**Apple’s own items:** with the Standard hiding method, macOS hides Focus, AirDrop, Now Playing, Fast User Switching, Live Activities and the camera indicator whenever any other item is hidden, and never hides Time Machine or the Input menu. Choose the Native hiding method to keep them on the menu bar, or turn on Replace Control Center items in the Apple’s Items tab to put %@ icons in their place, which you can move and hide." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Apple 系统图标：**使用标准隐藏方式时，只要有其他图标被隐藏，macOS 就会隐藏专注模式、隔空投送、正在播放、快速用户切换、实时活动和摄像头指示灯，但始终保留时间机器和输入菜单。选择原生隐藏方式可将它们保留在菜单栏中；也可在“Apple 系统图标”标签页开启“替换控制中心图标”，改用可移动和隐藏的 %@ 图标。"
+          }
+        }
+      }
+    },
+    "The file holds %lld profiles; at most %lld can be imported at once." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文件包含 %lld 个布局方案；一次最多可导入 %lld 个。"
+          }
+        }
+      }
+    },
+    "Applying this profile changes" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用此布局方案会更改"
+          }
+        }
+      }
+    },
+    "This profile couldn't be read." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法读取此布局方案。"
+          }
+        }
+      }
+    },
+    "Update this profile with the current layout and settings" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用当前布局和设置更新此方案"
+          }
+        }
+      }
+    },
+    "Update Settings Only" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅更新设置"
+          }
+        }
+      }
+    },
+    "Update Settings in Every Profile" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新所有布局方案中的设置"
+          }
+        }
+      }
+    },
+    "Update with Current Setup" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用当前配置更新"
+          }
+        }
+      }
+    },
+    "Dividers show the chevron until you choose an image." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未选择图片时，分隔符显示为箭头。"
+          }
+        }
+      }
+    },
+    "Shown between sections while they are open." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "区域展开时显示在区域之间。"
+          }
+        }
+      }
+    },
+    "Match the menu bar's appearance" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匹配菜单栏外观"
+          }
+        }
+      }
+    },
+    "Draws the image in the menu bar's own color, light or dark, and drops its colors." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用菜单栏自身的浅色或深色绘制图片，不保留图片原有颜色。"
+          }
+        }
+      }
+    },
+    "Change Image…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更换图片…"
+          }
+        }
+      }
+    },
+    "Divider image" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分隔符图片"
+          }
+        }
+      }
+    },
+    "Apply a profile with a keyboard shortcut." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通过键盘快捷键应用布局方案。"
+          }
+        }
+      }
+    },
+    "Choose a profile, then the display, Space or Focus that switches to it." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择布局方案，再选择用于切换到该方案的显示器、桌面空间或专注模式。"
+          }
+        }
+      }
+    },
+    "Show menu bar items while an app is running." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用运行时显示菜单栏图标。"
+          }
+        }
+      }
+    },
+    "Profile shortcuts" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "布局方案快捷键"
+          }
+        }
+      }
+    },
+    "What switches to this profile" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此布局方案的切换条件"
+          }
+        }
+      }
+    },
+    "Switch profiles by display, Space or Focus" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按显示器、桌面空间或专注模式切换布局方案"
+          }
+        }
+      }
+    },
+    "Hiding the icon also shrinks the section dividers to nothing. If items start landing in the wrong section, show the icon again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏图标也会将区域分隔符缩小至不可见。如果图标进入了错误的区域，请重新显示图标。"
+          }
+        }
+      }
+    },
+    "macOS isn't allowing %@ in the menu bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 不允许 %@ 显示在菜单栏中"
+          }
+        }
+      }
+    },
+    "The %@ icon isn't in the menu bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 图标不在菜单栏中"
+          }
+        }
+      }
+    },
+    "%@ can't hide or arrange anything until it is switched back on in System Settings > Menu Bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“系统设置 > 菜单栏”中重新启用 %@ 后，才能隐藏或排列图标。"
+          }
+        }
+      }
+    },
+    "macOS may be blocking it. Check that %@ is switched on in System Settings > Menu Bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 可能阻止了它。请检查“系统设置 > 菜单栏”中是否已启用 %@。"
+          }
+        }
+      }
+    },
+    "Hover over an empty area of the menu bar or the %@ icon to show hidden menu bar items." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将指针悬停在菜单栏空白处或 %@ 图标上，可显示隐藏的菜单栏图标。"
+          }
+        }
+      }
+    },
+    "It’s one of Apple’s own items, which macOS keeps in the menu bar unless %@ asks it not to. Choose Everything under Hiding method in Settings %@ Layout to move it." : {
+      "comment" : "Explanation shown when an Apple item was refused because system item hiding is off",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是 Apple 系统图标，除非 %@ 请求隐藏，否则 macOS 会将其保留在菜单栏中。请在“设置 %@ 布局”的隐藏方式下选择“全部”，以移动该图标。"
+          }
+        }
+      }
+    },
+    "Move it in the menu bar" : {
+      "comment" : "Title shown when a section change is refused because arrangement mode is Manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单栏中移动"
+          }
+        }
+      }
+    },
+    "Item arrangement is set to Manual, so an item's section is the side of the dividers it sits on. ⌘-drag it past a divider in the menu bar, or switch to Automatic in Settings %@ Layout." : {
+      "comment" : "Explanation shown when a section change is refused because arrangement mode is Manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标排列设为手动，因此图标所在区域取决于它位于分隔符的哪一侧。在菜单栏中按住 ⌘ 将图标拖过分隔符，或在“设置 %@ 布局”中切换为自动。"
+          }
+        }
+      }
+    },
+    "You set the order yourself by ⌘-dragging items in the menu bar. Thaw still hides and shows items, but only moves an item when you arrange it in Layout." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按住 ⌘ 在菜单栏中拖动图标可自行排列。Thaw 仍会隐藏和显示图标，但只有在“布局”中排列时才会移动图标。"
+          }
+        }
+      }
+    },
+    "Show Hidden Apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示隐藏的应用"
+          }
+        }
+      }
+    },
+    "Hide Chosen Apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏所选应用"
+          }
+        }
+      }
+    },
+    "Hide these apps' menu bar items:" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏以下应用的菜单栏图标："
+          }
+        }
+      }
+    },
+    "No apps found" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未找到应用"
+          }
+        }
+      }
+    },
+    "Switch to the Full %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换到完整功能的 %@"
+          }
+        }
+      }
+    },
+    "Turn On Accessibility for the Full %@…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为完整功能的 %@ 开启辅助功能权限…"
+          }
+        }
+      }
+    },
+    "When I click elsewhere" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点击其他位置时"
+          }
+        }
+      }
+    },
+    "When I switch apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换应用时"
+          }
+        }
+      }
+    },
+    "After 1 minute" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 分钟后"
+          }
+        }
+      }
+    },
+    "After %lld seconds" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 秒后"
+          }
+        }
+      }
+    },
+    "Open visibility recovery?" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开可见性恢复？"
+          }
+        }
+      }
+    },
+    "Repair" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修复"
+          }
+        }
+      }
+    },
+    "Saved item positions were reset. Backup saved as %@. Relaunching…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已重置保存的图标位置。备份已保存为 %@。正在重新启动…"
+          }
+        }
+      }
+    },
+    "Saved item positions were reset. Relaunching…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已重置保存的图标位置。正在重新启动…"
+          }
+        }
+      }
+    },
+    "Every menu bar item's saved position will be deleted and the menu bar will restart, so your whole arrangement is rebuilt from scratch. A backup is saved first, and Layout backups on this page can put it back. %@ relaunches afterward." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将删除所有菜单栏图标的已保存位置，并重启菜单栏，从头重建整个排列。操作前会先保存备份，可通过本页的布局备份恢复。随后 %@ 会重新启动。"
+          }
+        }
+      }
+    },
+    "Quit Thaw and Open Recovery" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出 Thaw 并打开恢复"
+          }
+        }
+      }
+    },
+    "Thaw will quit normal mode so neither hiding mechanism can interfere. Your saved layout is kept. Native hiding will remain off after recovery." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thaw 会退出常规模式，避免两种隐藏机制干扰恢复。已保存的布局会保留。恢复后原生隐藏仍保持关闭。"
+          }
+        }
+      }
+    },
+    "Missing menu bar items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏图标缺失"
+          }
+        }
+      }
+    },
+    "Restore app visibility without resetting your layout. Normal hiding stops while a separate recovery window is open." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复应用可见性，不重置布局。独立恢复窗口打开时会暂停常规隐藏。"
+          }
+        }
+      }
+    },
+    "Restore Missing Items…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复缺失的图标…"
+          }
+        }
+      }
+    },
+    "Shows only the essential settings, with a preview of your sections. Everything else keeps working as you set it." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅显示必要设置和区域预览。其他功能仍按现有设置运行。"
+          }
+        }
+      }
+    },
+    "Black background in dark mode" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色模式下使用纯黑背景"
+          }
+        }
+      }
+    },
+    "Draws this window on pure black for OLED displays. Light mode is unchanged." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 OLED 显示器上将此窗口背景设为纯黑。浅色模式不受影响。"
+          }
+        }
+      }
+    },
+    "Takes new pictures of your Hidden and Always Hidden items, for example when they show app icons instead." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为“隐藏”和“始终隐藏”区域的图标重新截图，例如当它们显示为应用图标时。"
+          }
+        }
+      }
+    },
+    "Capture hidden items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截取隐藏图标"
+          }
+        }
+      }
+    },
+    "Capture Hidden Items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截取隐藏图标"
+          }
+        }
+      }
+    },
+    "Takes pictures of your Hidden and Always Hidden items that have none or a poor one. Hold Option to retake every picture. They may appear in the menu bar for a moment, and with the Native hiding method other icons can move." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为“隐藏”和“始终隐藏”区域中缺少截图或截图质量较差的图标重新截图。按住 Option 可重新截取全部图标。图标可能会短暂出现在菜单栏中；使用原生隐藏方式时，其他图标也可能移动。"
+          }
+        }
+      }
+    },
+    "Left %lld good pictures as they were." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保留了 %lld 张质量良好的截图。"
+          }
+        }
+      }
+    },
+    "Captured %lld of %lld items. No new picture for: %@." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已截取 %lld 个图标，共 %lld 个。以下图标未获得新截图：%@。"
+          }
+        }
+      }
+    },
+    "Captured %lld of %lld items." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已截取 %lld 个图标，共 %lld 个。"
+          }
+        }
+      }
+    },
+    "Thaw needs Screen Recording permission to capture items." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thaw 需要屏幕录制权限才能截取图标。"
+          }
+        }
+      }
+    },
+    "Grant Access to Restore Menu Bar Items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "授予访问权限以恢复菜单栏图标"
+          }
+        }
+      }
+    },
+    "Select “group.com.apple.controlcenter.plist” to restore app visibility. Recovery will not change saved item positions." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择“group.com.apple.controlcenter.plist”以恢复应用可见性。恢复不会更改已保存的图标位置。"
+          }
+        }
+      }
+    },
+    "Corners" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆角"
+          }
+        }
+      }
+    },
+    "Applying writes the new spacing without restarting apps; the new spacing appears the next time each menu bar app starts." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用设置会写入新间距，但不会重启应用；各菜单栏应用下次启动时才会采用新间距。"
+          }
+        }
+      }
+    },
+    "This will overwrite the settings of ^[%lld display](inflect: true) with the global template. If the active display’s spacing changes, the new spacing appears the next time each menu bar app starts, and apps are not restarted." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这会用全局模板覆盖 %lld 个显示器的设置。如果当前显示器的间距发生变化，各菜单栏应用下次启动时才会采用新间距，不会重启应用。"
+          }
+        }
+      }
+    },
+    "Modules" : {
+      "comment" : "A heading in the settings sidebar, over the Profiles, Automation and Experiments pages, the parts of Thaw beyond the everyday pages.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "功能模块"
+          }
+        }
+      }
+    },
+    "Manage" : {
+      "comment" : "A heading in the settings sidebar, over the Privacy and Troubleshooting pages, which look after Thaw itself.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理"
+          }
+        }
+      }
+    },
+    "Native didn't start, so %@ is using Standard: %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生方式未能启动，%@ 正在使用标准方式：%@"
+          }
+        }
+      }
+    },
+    "macOS gave no reason." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 未提供原因。"
+          }
+        }
+      }
+    },
+    "Version %@, build %@, commit %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本 %@，构建 %@，提交 %@"
+          }
+        }
+      }
+    },
+    "Show Welcome Screens Again" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新显示欢迎界面"
+          }
+        }
+      }
+    },
+    "There is no %@ release of %@ 3 yet." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 频道尚未提供 %@ 3 版本。"
+          }
+        }
+      }
+    },
+    "Keyboard shortcut" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "键盘快捷键"
+          }
+        }
+      }
+    },
+    "A Space takes priority over a display, and a Focus filter over both." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桌面空间优先于显示器，专注模式过滤条件的优先级最高。"
+          }
+        }
+      }
+    },
+    "On this display" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此显示器上"
+          }
+        }
+      }
+    },
+    "Switches when the menu bar moves to it." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏移到此显示器时切换。"
+          }
+        }
+      }
+    },
+    "Use This Space" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用此桌面空间"
+          }
+        }
+      }
+    },
+    "None. %@ names a Space by its place in Mission Control." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无。%@ 按调度中心中的位置命名桌面空间。"
+          }
+        }
+      }
+    },
+    "In this Space" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此桌面空间中"
+          }
+        }
+      }
+    },
+    "A Space" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桌面空间"
+          }
+        }
+      }
+    },
+    "With a Focus" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用专注模式时"
+          }
+        }
+      }
+    },
+    "Add %@ as a Focus filter in System Settings > Focus and pick this profile. When the Focus ends, the display's profile comes back." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“系统设置 > 专注模式”中将 %@ 添加为专注模式过滤条件，并选择此布局方案。专注模式结束后会恢复显示器对应的布局方案。"
+          }
+        }
+      }
+    },
+    "Groups" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分组"
+          }
+        }
+      }
+    },
+    "Options" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选项"
+          }
+        }
+      }
+    },
+    "Apple’s Items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 系统图标"
+          }
+        }
+      }
+    },
+    "Hide whole apps from a menu. Arranging items, the %@ Bar and search stay off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通过菜单隐藏整个应用的图标。图标排列、%@ 工具栏和搜索将保持关闭。"
+          }
+        }
+      }
+    },
+    "Continue without Accessibility" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不授予辅助功能权限并继续"
+          }
+        }
+      }
+    },
+    "Reorders items in %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新排列 %@ 中的图标"
+          }
+        }
+      }
+    },
+    "When an app runs" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用运行时"
+          }
+        }
+      }
+    },
+    "Remove this trigger?" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除此触发规则？"
+          }
+        }
+      }
+    },
+    "Reset all triggers?" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置所有触发规则？"
+          }
+        }
+      }
+    },
+    "Saved triggers unavailable" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存的触发规则不可用"
+          }
+        }
+      }
+    },
+    "macOS may also show other menu bar items from the same app." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 可能也会显示同一应用的其他菜单栏图标。"
+          }
+        }
+      }
+    },
+    "Show chosen items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示所选图标"
+          }
+        }
+      }
+    },
+    "They show while the app runs, even in the background, and go back to their place when it quits." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用运行期间会显示这些图标，即使应用在后台运行；退出后图标会回到原来的位置。"
+          }
+        }
+      }
+    },
+    "Remove Trigger" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除触发规则"
+          }
+        }
+      }
+    },
+    "Its items will follow the saved layout unless another trigger still reveals them." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "除非其他触发规则仍在显示这些图标，否则它们将遵循已保存的布局。"
+          }
+        }
+      }
+    },
+    "Reset Triggers" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置触发规则"
+          }
+        }
+      }
+    },
+    "Saved triggers could not be read and have not been changed. Resetting removes only these trigger rules." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法读取已保存的触发规则，原数据未被更改。重置仅会移除这些触发规则。"
+          }
+        }
+      }
+    },
+    "While %@ is running" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 运行期间"
+          }
+        }
+      }
+    },
+    "Disabled" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已停用"
+          }
+        }
+      }
+    },
+    "App is running" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用正在运行"
+          }
+        }
+      }
+    },
+    "Waiting for app to launch" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待应用启动"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑"
+          }
+        }
+      }
+    },
+    "Edit trigger for %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑 %@ 的触发规则"
+          }
+        }
+      }
+    },
+    "Remove trigger for %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除 %@ 的触发规则"
+          }
+        }
+      }
+    },
+    "Choose App" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择应用"
+          }
+        }
+      }
+    },
+    "When this app runs" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此应用运行时"
+          }
+        }
+      }
+    },
+    "Show these menu bar items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示这些菜单栏图标"
+          }
+        }
+      }
+    },
+    "Launch an app with a menu bar item to make it available here." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动带有菜单栏图标的应用，即可在此选择。"
+          }
+        }
+      }
+    },
+    "Not currently in the menu bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前不在菜单栏中"
+          }
+        }
+      }
+    },
+    "Save Trigger" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存触发规则"
+          }
+        }
+      }
+    },
+    "Choose an application with a bundle identifier." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请选择具有应用标识符的应用。"
+          }
+        }
+      }
+    },
+    "The app could not be selected. Try again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法选择该应用，请重试。"
+          }
+        }
+      }
+    },
+    "Choose whether hidden items appear in the menu bar, in the %@ Bar below it, or stay in the menu bar. Picking the %@ Bar turns it on." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择在菜单栏中展开隐藏图标、在下方的 %@ 工具栏中显示，或始终保留在菜单栏中。选择 %@ 工具栏会启用它。"
+          }
+        }
+      }
+    },
+    "Choose whether a spacing change asks first, restarts menu bar apps right away, or waits until they restart." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择更改间距时先询问、立即重启菜单栏应用，还是等待应用自行重启。"
+          }
+        }
+      }
+    },
+    "Keeps hidden items in the menu bar while it is on a display at least the width you choose." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当菜单栏所在显示器达到指定宽度时，将隐藏的图标保留在菜单栏中。"
+          }
+        }
+      }
+    },
+    "Show hidden items" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示隐藏图标"
+          }
+        }
+      }
+    },
+    "When spacing changes" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "间距更改时"
+          }
+        }
+      }
+    },
+    "Show every item on wide displays" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在宽屏显示器上显示所有图标"
+          }
+        }
+      }
+    },
+    "Wide displays" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宽屏显示器"
+          }
+        }
+      }
+    },
+    "Restore app visibility without resetting saved positions or section assignments." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复应用可见性，不重置已保存的位置或区域分配。"
+          }
+        }
+      }
+    },
+    "“%@” will be deleted. If its saved content is available, you can undo this with Command-Z." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将删除“%@”。如果其保存的内容可用，你可以按 Command-Z 撤销。"
+          }
+        }
+      }
+    },
+    "Line" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直线"
+          }
+        }
+      }
+    },
+    "Slash" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斜线"
+          }
+        }
+      }
+    },
+    "Menu Bar Visibility Recovery" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏可见性恢复"
+          }
+        }
+      }
+    },
+    "Hidden items appear in the menu bar when you reveal them on this display. The %@ Bar is off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此显示器上展开隐藏图标时，它们会显示在菜单栏中。%@ 工具栏已关闭。"
+          }
+        }
+      }
+    },
+    "Hidden items appear in the menu bar when you reveal them. The %@ Bar is off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展开隐藏图标时，它们会显示在菜单栏中。%@ 工具栏已关闭。"
+          }
+        }
+      }
+    },
+    "The %@ Bar is on. Hidden items appear in it, below the menu bar, when you reveal them." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 工具栏已开启。展开隐藏图标时，它们会显示在菜单栏下方的工具栏中。"
+          }
+        }
+      }
+    },
+    "Hidden items stay in the menu bar on this display. The %@ Bar is off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此显示器上，隐藏图标会保留在菜单栏中。%@ 工具栏已关闭。"
+          }
+        }
+      }
+    },
+    "Hidden items stay in the menu bar. The %@ Bar is off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏图标会保留在菜单栏中。%@ 工具栏已关闭。"
+          }
+        }
+      }
+    },
+    "%@ is running, but %@ can't see its menu bar items, so it can't hide or arrange them. If its icon is missing from the menu bar too, quit and reopen %@. Otherwise, relaunch %@." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 正在运行，但 %@ 无法检测到其菜单栏图标，因此无法隐藏或排列它们。如果菜单栏中也没有该图标，请退出并重新打开 %@；否则，请重新启动 %@。"
+          }
+        }
+      }
+    },
+    "%@ are running, but %@ can't see their menu bar items, so it can't hide or arrange them. If their icons are missing from the menu bar too, quit and reopen them. Otherwise, relaunch %@." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 正在运行，但 %@ 无法检测到它们的菜单栏图标，因此无法隐藏或排列它们。如果菜单栏中也没有这些图标，请退出并重新打开对应应用；否则，请重新启动 %@。"
+          }
+        }
+      }
+    },
+    "Relaunch %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新启动 %@"
+          }
+        }
+      }
+    },
+    "Leave this off if you prefer macOS’s » button: macOS keeps the items that don’t fit there, and your layout stays exactly as you arranged it." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果更喜欢 macOS 的 » 按钮，请保持关闭：macOS 会将放不下的图标收纳到那里，现有布局保持不变。"
+          }
+        }
+      }
+    },
+    "Pop Out Editor" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在独立窗口中打开编辑器"
+          }
+        }
+      }
+    },
+    "Opens the experimental reorder editor in its own window." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在独立窗口中打开实验性的排序编辑器。"
+          }
+        }
+      }
+    },
+    "Little Snitch is running, but %@ can’t see its menu bar icon. In Little Snitch’s settings, under Security, turn on “Allow GUI Scripting access to Little Snitch.”" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Little Snitch 正在运行，但 %@ 无法检测到它的菜单栏图标。请在 Little Snitch 设置的“安全”中开启“Allow GUI Scripting access to Little Snitch”。"
+          }
+        }
+      }
+    },
+    "Open Little Snitch" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开 Little Snitch"
+          }
+        }
+      }
+    },
+    "Invert (Experimental)" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "反色（实验性）"
+          }
+        }
+      }
+    },
+    "Edge (Experimental)" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "边缘（实验性）"
+          }
+        }
+      }
+    },
+    "Sheer (Experimental)" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "半透明（实验性）"
+          }
+        }
+      }
+    },
+    "Dim (Experimental)" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "调暗（实验性）"
+          }
+        }
+      }
+    },
+    "Other apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他应用"
+          }
+        }
+      }
+    },
+    "Let apps change settings" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许应用更改设置"
+          }
+        }
+      }
+    },
+    "Apps you approve can change %@ with thaw:// links. Each new app asks you once." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你批准的应用可以通过 thaw:// 链接更改 %@ 的设置。每个新应用首次使用时都会请求授权。"
+          }
+        }
+      }
+    },
+    "Choose App…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择应用…"
+          }
+        }
+      }
+    },
+    "Remove %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除 %@"
+          }
+        }
+      }
+    },
+    "Scripts when a profile switches" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "布局方案切换时运行的脚本"
+          }
+        }
+      }
+    },
+    "They run between the two above, only when switching to this profile." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅在切换到此布局方案时运行，执行顺序位于上方两个脚本之间。"
+          }
+        }
+      }
+    },
+    "What scripts receive" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚本接收的参数"
+          }
+        }
+      }
+    },
+    "Scripts get these environment variables:" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚本会获得以下环境变量："
+          }
+        }
+      }
+    },
+    "For example, `defaults write com.bjango.istatmenus5 ActiveProfile -string \"$THAW_PROFILE_NAME\"` keeps iStat Menus on the same profile." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如，`defaults write com.bjango.istatmenus5 ActiveProfile -string \"$THAW_PROFILE_NAME\"` 可让 iStat Menus 使用相同的布局方案。"
+          }
+        }
+      }
+    },
+    "Change…" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更改…"
+          }
+        }
+      }
+    },
+    "Script options" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脚本选项"
+          }
+        }
+      }
+    },
+    "Run this script" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "运行此脚本"
+          }
+        }
+      }
+    },
+    "Remove Script" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除脚本"
+          }
+        }
+      }
+    },
+    "%lld s" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 秒"
+          }
+        }
+      }
+    },
+    "%@, off" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，关闭"
+          }
+        }
+      }
+    },
+    "Keep layout changes in this profile" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将布局更改保存到此方案"
+          }
+        }
+      }
+    },
+    "Icons you move while this profile is active are saved into it. Turn off to keep the profile as a fixed layout." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此布局方案启用时，移动图标的更改会保存到方案中。关闭后可将该方案保留为固定布局。"
+          }
+        }
+      }
+    },
+    "Apply again when %@ starts" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 启动时重新应用"
+          }
+        }
+      }
+    },
+    "Puts this profile's saved layout back each time %@ starts, instead of keeping the menu bar as you left it." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每次 %@ 启动时恢复此方案保存的布局，而不是保留退出前的菜单栏状态。"
+          }
+        }
+      }
+    },
+    "Manually or by shortcut" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手动或通过快捷键"
+          }
+        }
+      }
+    },
+    "a display" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示器"
+          }
+        }
+      }
+    },
+    "a Space" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桌面空间"
+          }
+        }
+      }
+    },
+    "No display or Space switches profiles yet." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未设置按显示器或桌面空间切换布局方案。"
+          }
+        }
+      }
+    },
+    "%@ on %@" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@（%@）"
+          }
+        }
+      }
+    },
+    "“%@” is a Control Center control, so macOS places it and Thaw cannot. Hold ⌘ and drag it in the menu bar to move it" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@”是控制中心控件，其位置由 macOS 管理，Thaw 无法移动。按住 ⌘ 在菜单栏中拖动即可移动"
+          }
+        }
+      }
+    },
+    "macOS only reads the spacing when an app with a menu bar item starts." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 仅在带有菜单栏图标的应用启动时读取间距。"
+          }
+        }
+      }
+    },
+    "Restarting apps applies the change now; waiting leaves every app running and the new spacing appears the next time each app starts (after a restart, or when you reopen it)." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重启应用可立即应用更改；选择等待会保留所有正在运行的应用，新间距将在各应用下次启动时生效（重启系统或重新打开应用后）。"
+          }
+        }
+      }
+    },
+    "Save spacing to every profile" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将间距保存到所有布局方案"
+          }
+        }
+      }
+    },
+    "When a profile is active and this is off, a spacing change saves to that profile only." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用布局方案时，若此选项关闭，间距更改仅保存到当前方案。"
+          }
+        }
+      }
+    },
+    "Ask before restarting menu bar apps" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重启菜单栏应用前询问"
+          }
+        }
+      }
+    },
+    "Restart menu bar apps right away" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立即重启菜单栏应用"
+          }
+        }
+      }
+    },
+    "Wait until the apps restart" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待应用自行重启"
+          }
+        }
+      }
+    },
+    "While the menu bar is on a display at least this wide, hidden items stay in the menu bar, as if “Always show hidden items” were on for that display." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏所在显示器达到此宽度时，隐藏图标会保留在菜单栏中，相当于为该显示器开启“始终显示隐藏图标”。"
+          }
+        }
+      }
+    },
+    "At least" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "至少"
+          }
+        }
+      }
+    },
+    "Spacing" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "间距"
+          }
+        }
+      }
+    },
+    "Wide Displays" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宽屏显示器"
+          }
+        }
+      }
+    },
+    "Turn On & Open" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启并打开"
+          }
+        }
+      }
+    },
+    "macOS takes pinned Control Center items like this one off the menu bar while other icons are hidden. It comes back when you show them." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他图标被隐藏时，macOS 会将这类固定的控制中心图标移出菜单栏。显示隐藏图标时，它会重新出现。"
+          }
+        }
+      }
+    },
+    "Native" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生"
+          }
+        }
+      }
+    },
+    "Standard" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标准"
+          }
+        }
+      }
+    },
+    "Keeps Live Activities, the camera indicator and Apple’s own items on the menu bar.\nCan’t hide Clock, Control Center or Siri. macOS may show the screen recording indicator." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将实时活动、摄像头指示灯和 Apple 系统图标保留在菜单栏中。\n无法隐藏时钟、控制中心或 Siri。macOS 可能会显示屏幕录制指示灯。"
+          }
+        }
+      }
+    },
+    "Hides any app’s items, and Clock, Control Center and Siri too.\nWhile they’re hidden, macOS also removes Live Activities and the camera indicator." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可隐藏任何应用的图标，以及时钟、控制中心和 Siri。\n隐藏期间，macOS 也会移除实时活动和摄像头指示灯。"
+          }
+        }
+      }
+    },
+    "%@ needs Accessibility to hide and show menu bar items." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 需要辅助功能权限才能隐藏和显示菜单栏图标。"
+          }
+        }
+      }
+    },
+    "Hide items again" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次隐藏图标"
+          }
+        }
+      }
+    },
+    "Always Hidden section" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "始终隐藏区域"
+          }
+        }
+      }
+    },
+    "Adds a second divider. Icons left of it stay hidden until you double-click %@'s icon." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加第二个分隔符。其左侧的图标会保持隐藏，直到你双击 %@ 图标。"
+          }
+        }
+      }
+    },
+    "Sections preview" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "区域预览"
+          }
+        }
+      }
+    },
+    "Shows your Visible, Hidden and Always Hidden items at the top of this page." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在本页顶部显示“显示”“隐藏”和“始终隐藏”区域的图标。"
+          }
+        }
+      }
+    },
+    "Hold ⌘ and drag icons to the left of the divider in your menu bar to hide them. Click %@'s icon to show them again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按住 ⌘，将菜单栏图标拖到分隔符左侧即可隐藏。点击 %@ 图标可再次显示。"
+          }
+        }
+      }
+    },
+    "Shortcut to show and hide" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示和隐藏的快捷键"
+          }
+        }
+      }
+    },
+    "Saved triggers could not be read. They have not been changed. Reset triggers to start again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法读取已保存的触发规则，原数据未被更改。重置触发规则可重新开始。"
+          }
+        }
+      }
+    },
+    "Choose an app and at least one menu bar item." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请选择一个应用和至少一个菜单栏图标。"
+          }
+        }
+      }
+    },
+    "The trigger could not be saved. Try again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法保存触发规则，请重试。"
+          }
+        }
+      }
+    },
+    "In the menu bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单栏中"
+          }
+        }
+      }
+    },
+    "In the %@ Bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 工具栏中"
+          }
+        }
+      }
+    },
+    "Always in the menu bar" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "始终显示在菜单栏中"
+          }
+        }
+      }
+    },
+    "Some apps may still be hidden" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分应用可能仍被隐藏"
+          }
+        }
+      }
+    },
+    "Some apps hidden in a previous session couldn't be restored. Open Tools to review their recovery records." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法恢复上次会话中隐藏的部分应用。请打开“故障排查”查看恢复记录。"
+          }
+        }
+      }
+    },
+    "Open Tools" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开故障排查"
+          }
+        }
+      }
+    },
+    "Using Standard for now: %@ Choose Standard and then Native to try again." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂时使用标准方式：%@。先选择标准方式，再选择原生方式可重试。"
+          }
+        }
+      }
+    },
+    "Choosing that file gives %@ access to it alone. Without it, %@ moves items with the pointer, which takes over your cursor while it works. You may need to quit and reopen %@ before it takes effect." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择该文件仅会授予 %@ 对此文件的访问权限。没有此权限时，%@ 会通过指针移动图标，操作期间会占用鼠标指针。你可能需要退出并重新打开 %@ 才能生效。"
+          }
+        }
+      }
+    },
+    "Items move into place without your pointer moving, because %@ updates macOS's saved menu bar layout. It touches only that one file. You may need to quit and reopen %@ before it takes effect." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 会更新 macOS 保存的菜单栏布局，因此移动图标时无需移动指针。它仅访问这一个文件。你可能需要退出并重新打开 %@ 才能生效。"
+          }
+        }
+      }
+    },
+    "It also stops hidden items from flashing when Notification Center opens. Choosing the file gives %@ access to it alone. You may need to quit and reopen %@ before it takes effect." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这也能防止打开通知中心时隐藏图标闪现。选择该文件仅会授予 %@ 对此文件的访问权限。你可能需要退出并重新打开 %@ 才能生效。"
+          }
+        }
+      }
+    },
+    "Keeps Live Activities and the camera indicator visible while apps are hidden, and helps with hidden items flashing when Notification Center opens. You may need to quit and reopen %@ before it takes effect." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在隐藏应用时保留实时活动和摄像头指示灯，并减少打开通知中心时隐藏图标闪现的问题。你可能需要退出并重新打开 %@ 才能生效。"
+          }
+        }
+      }
+    },
+    "macOS hides Focus, AirDrop, Now Playing and Fast User Switching whenever any other item is hidden, and never hides Time Machine or the Input menu. This puts a %@ icon in each one’s place that does the same things, and you can move or hide it like any other item. Choose which ones below; turn this off to bring the originals back." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只要有其他图标被隐藏，macOS 就会隐藏专注模式、隔空投送、正在播放和快速用户切换，但始终保留时间机器和输入菜单。此功能会用具有相同功能的 %@ 图标替代它们，让你像其他图标一样移动或隐藏。请在下方选择要替换的图标；关闭此功能可恢复原始图标。"
+          }
+        }
+      }
+    },
+    "Time Machine" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间机器"
+          }
+        }
+      }
+    },
+    "Input menu" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "输入菜单"
+          }
+        }
+      }
+    },
+    "Timer" : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计时器"
+          }
+        }
+      }
+    },
+    "Recovery was skipped. Your saved layout and positions were not changed. Quit recovery and reopen Thaw. Native hiding remains off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已跳过恢复。已保存的布局和位置未被更改。请退出恢复并重新打开 Thaw。原生隐藏仍保持关闭。"
+          }
+        }
+      }
+    },
+    "Visibility settings were saved and verified. Quit recovery and check your menu bar before reopening Thaw. Native hiding remains off." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存并验证可见性设置。请退出恢复，检查菜单栏后再重新打开 Thaw。原生隐藏仍保持关闭。"
+          }
+        }
+      }
+    },
+    "Quit other copies of Thaw and Bartender before continuing. Recovery records have been kept." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续之前，请退出其他 Thaw 实例和 Bartender。恢复记录已保留。"
+          }
+        }
+      }
+    },
+    "Read and write access was not granted. Try again or restore the app switches in System Settings → Menu Bar." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未获得读写权限。请重试，或在“系统设置 → 菜单栏”中恢复应用开关。"
+          }
+        }
+      }
+    },
+    "Open recovery from Troubleshooting so normal hiding can stop first." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请从“故障排查”打开恢复，以便先停止常规隐藏。"
+          }
+        }
+      }
+    },
+    "Thaw can’t read this file as an image." : {
+      "comment" : "",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thaw 无法将此文件作为图片读取。"
+          }
+        }
+      }
+    },
     "" : {
       "localizations" : {
         "cs" : {
@@ -18124,7 +21127,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "需要可访问性才能继续。"
+            "value" : "需要辅助功能权限才能继续。"
           }
         },
         "zh-Hant" : {
@@ -39498,7 +42501,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "查看"
+            "value" : "检查"
           }
         },
         "zh-Hant" : {
@@ -39853,7 +42856,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "立即查看"
+            "value" : "检查更新"
           }
         },
         "zh-Hant" : {
@@ -56644,7 +59647,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "制作人员"
+            "value" : "鸣谢"
           }
         },
         "zh-Hant" : {
@@ -81276,7 +84279,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "的确"
+            "value" : "已授权"
           }
         },
         "zh-Hant" : {
@@ -108908,7 +111911,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "移动菜单栏图标以重新排列或隐藏他们。"
+            "value" : "移动菜单栏图标，以重新排列或隐藏它们。"
           }
         },
         "zh-Hant" : {
@@ -125487,7 +128490,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "选修的"
+            "value" : "可选"
           }
         },
         "zh-Hant" : {
@@ -140474,7 +143477,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "反馈 Bug"
+            "value" : "反馈问题"
           }
         },
         "zh-Hant" : {
@@ -159106,7 +162109,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "快捷方式"
+            "value" : "快捷键"
           }
         },
         "zh-Hant" : {
@@ -200780,7 +203783,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "能见度"
+            "value" : "显示与隐藏"
           }
         },
         "zh-Hant" : {
@@ -202553,7 +205556,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "什么是新的"
+            "value" : "更新说明"
           }
         },
         "zh-Hant" : {

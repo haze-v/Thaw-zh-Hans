@@ -26,7 +26,11 @@ the items under New and Fixed.
 
 ### Changed
 
-- Completed the Simplified Chinese interface translation, including layout, overflow and the Thaw Bar.
+- Expanded the Simplified Chinese interface translation, including layout, overflow and the Thaw Bar.
+
+### Fixed
+
+- Added 273 Simplified Chinese translations missing from the source catalog, including sidebar groups, display settings, automation and recovery, and polished common interface labels.
 
 ## [3.0.0-beta.6] - 2026-11-03
 
