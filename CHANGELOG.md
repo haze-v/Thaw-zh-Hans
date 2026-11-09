@@ -24,6 +24,10 @@ the items under New and Fixed.
 
 ## [Unreleased]
 
+### Changed
+
+- Completed the Simplified Chinese interface translation, including layout, overflow and the Thaw Bar.
+
 ## [3.0.0-beta.6] - 2026-11-03
 
 **macOS 27 only · Build 123**
