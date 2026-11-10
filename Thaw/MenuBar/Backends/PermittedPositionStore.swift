@@ -182,6 +182,31 @@ struct PermittedPositionStore {
         )
     }
 
+    /// Seats a single item between its drawn neighbours, including a fixed system anchor.
+    func move(
+        item: MenuBarItem,
+        between leading: MenuBarItem,
+        and trailing: MenuBarItem,
+        liveItems: [MenuBarItem],
+        permit: borrowing StoreWritePermit
+    ) -> Bool {
+        guard !refusesOrdering, positionsDomainIsAccessible() else { return false }
+        var positions = readPositions()
+        let keys = Array(positions.keys)
+        guard let itemKey = resolveKey(for: item, existingKeys: keys, positions: positions, liveItems: liveItems),
+              let leadingKey = resolveKey(for: leading, existingKeys: keys, positions: positions, liveItems: liveItems),
+              let trailingKey = resolveKey(for: trailing, existingKeys: keys, positions: positions, liveItems: liveItems),
+              itemKey != leadingKey, itemKey != trailingKey,
+              let leadingWeight = positions[leadingKey], let trailingWeight = positions[trailingKey],
+              !isParkedWeight(leadingWeight), !isParkedWeight(trailingWeight),
+              let weight = RuntimePreferenceKeys.midpointPosition(between: leadingWeight, and: trailingWeight),
+              weight != leadingWeight, weight != trailingWeight
+        else { return false }
+        positions[itemKey] = weight
+        writePositions(positions, permit: permit)
+        return true
+    }
+
     func writePositions(_ positions: [String: Int], permit: borrowing StoreWritePermit) {
         StoreWriteAudit.note(permit, write: "writePositions")
         base.writePositions(positions)

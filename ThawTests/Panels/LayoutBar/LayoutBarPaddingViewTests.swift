@@ -158,10 +158,36 @@ struct LayoutBarPaddingViewTests {
         let padding = try bars.padding()
         let drag = BarDrag(source: nil, location: .zero)
         #expect(padding.draggingEntered(drag) == [])
+        #expect(try bars.container().acceptsViewUpdates)
         #expect(!padding.performDragOperation(drag))
         padding.draggingExited(nil)
         padding.draggingEnded(drag)
         #expect(try bars.container().acceptsViewUpdates)
+    }
+
+    @Test("A grouped drag carries the whole group to an empty bar and cancellation restores the source")
+    func groupedDragAcrossEmptyBar() throws {
+        let items = Self.pair()
+        let bars = try Bars([], sections: [.visible, .hidden])
+        let origin = try bars.container(.hidden)
+        let target = try bars.container(.visible)
+        bars.world.seat(items, in: .hidden)
+        origin.rebuildViews()
+        let source = try #require(bars.itemViews(.hidden).last)
+        let sourcePadding = try bars.padding(.hidden)
+        let targetPadding = try bars.padding(.visible)
+        let drag = BarDrag(source: source, location: bars.point(on: source))
+
+        #expect(sourcePadding.draggingEntered(drag) == .move)
+        sourcePadding.draggingExited(drag)
+        #expect(targetPadding.draggingEntered(drag) == .move)
+        #expect(source.dragOrigin === origin)
+        #expect(target.orderedItemsForMenu().map(\.uniqueIdentifier) == items.map(\.uniqueIdentifier))
+        targetPadding.draggingExited(drag)
+        targetPadding.draggingEnded(drag)
+        #expect(target.orderedItemsForMenu().isEmpty)
+        #expect(origin.orderedItemsForMenu().map(\.uniqueIdentifier) == items.map(\.uniqueIdentifier))
+        #expect(origin.acceptsViewUpdates && target.acceptsViewUpdates)
     }
 
     @Test("A divider dropped on the bar is refused")

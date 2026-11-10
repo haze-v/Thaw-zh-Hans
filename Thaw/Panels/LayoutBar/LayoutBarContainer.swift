@@ -750,10 +750,13 @@ final class LayoutBarContainer: NSView {
     ///   to refuse it, which the user sees as the no-drop cursor.
     @discardableResult
     func handleDrag(_ draggingInfo: NSDraggingInfo, phase: DragPhase) -> NSDragOperation {
-        guard
-            let sourceView = draggingInfo.draggingSource as? LayoutBarArrangedView,
-            admitsDrag(of: sourceView)
-        else {
+        guard let sourceView = draggingInfo.draggingSource as? LayoutBarArrangedView else { return [] }
+        if phase == .entered, let origin = sourceView.superview as? LayoutBarContainer {
+            sourceView.captureDragOrigin(in: origin)
+        }
+        if [DragPhase.entered, .updated].contains(phase), !admitsDrag(of: sourceView) {
+            setIsDropTarget(false)
+            releaseDraggedBlock(from: sourceView)
             return []
         }
         switch phase {
@@ -821,36 +824,26 @@ final class LayoutBarContainer: NSView {
     ///
     /// Answered before any preview movement, so a drop this container would
     /// reject on release never looks acceptable on the way in.
-    private func admitsDrag(of sourceView: LayoutBarArrangedView) -> Bool {
+    func admitsDrag(of sourceView: LayoutBarArrangedView) -> Bool {
         // Only item views carry section eligibility; anything else (the badge,
         // a placeholder slot) is welcome wherever it is dropped.
         guard case let .item(item) = sourceView.kind else {
             return true
         }
-        let experimentalSystemItemHiding = appState?.settings.advanced.enableExperimentalSystemItemHiding ?? false
-        // A denylisted item may reorder but not hide; mirror the rejection in
-        // performDragOperation with the no-drop cursor.
-        if item.tag.isLayoutAnchoredSystemItem,
-           sourceView.oldContainerInfo?.container === self,
-           !LayoutBarPaddingView.allowsAnchoredSystemItemReordering(appState: appState)
-        {
-            return false
+        guard LayoutBarPaddingView.acceptsLayoutDrag(of: item), let appState else { return false }
+        let systemItemHiding = appState.settings.advanced.enableExperimentalSystemItemHiding
+        if sourceView.dragOrigin === self {
+            return !item.tag.isLayoutAnchoredSystemItem ||
+                (systemItemHiding && LayoutBarPaddingView.allowsAnchoredSystemItemReordering(appState: appState))
         }
-        // Every group member must be assignable, or the cursor promises a drop
-        // that setSection(_:items:atomically:) refuses.
-        let members = dragUnitViews(for: sourceView).compactMap { view -> MenuBarItem? in
-            if case let .item(member) = view.kind {
-                member
-            } else {
-                nil
-            }
-        }
-        let assignable = members.isEmpty ? [item] : members
-        return assignable.allSatisfy {
-            MenuBarBackendProvider.current.canAssign(
-                $0,
+        let controller = appState.menuBarManager.sectionController
+        guard section == .visible || controller.isHidingAvailable else { return false }
+        return sourceView.draggedViews.allSatisfy { view in
+            guard case let .item(member) = view.kind else { return false }
+            return MenuBarBackendProvider.current.canAssign(
+                member,
                 to: section,
-                experimentalSystemItemHiding: experimentalSystemItemHiding
+                experimentalSystemItemHiding: systemItemHiding
             )
         }
     }
@@ -863,7 +856,7 @@ final class LayoutBarContainer: NSView {
         }
         animatesNextLayoutPass = false
         // Pull the whole unit out, or the cluster splits on screen.
-        let unit = Set(dragUnitViews(for: sourceView).map(ObjectIdentifier.init))
+        let unit = Set(sourceView.draggedViews.map(ObjectIdentifier.init))
         arrangedViews.removeAll { unit.contains(ObjectIdentifier($0)) }
     }
 
@@ -871,29 +864,20 @@ final class LayoutBarContainer: NSView {
     /// at, leaving the arrangement untouched when the cursor has not committed
     /// to a slot yet.
     private func slideDraggedBlock(from sourceView: LayoutBarArrangedView, toward windowLocation: NSPoint) {
-        // Remember where the block started the first time this container sees
-        // it, so a drag that is later cancelled can be undone.
-        if
-            sourceView.oldContainerInfo == nil,
-            let startIndex = arrangedViews.firstIndex(of: sourceView)
-        {
-            sourceView.oldContainerInfo = (self, startIndex)
-        }
         // The badge moves only when it is the thing being dragged.
         let excludeBadge = !sourceView.isNewItemsBadge
         // No enabled neighbour means one possible slot. A badge-only lane
         // counts as empty.
         guard arrangedViews.contains(where: { $0.isEnabled && !(excludeBadge && $0.isNewItemsBadge) }) else {
             if !arrangedViews.contains(sourceView) {
-                arrangedViews.insert(sourceView, at: 0)
+                arrangedViews.insert(contentsOf: sourceView.draggedViews, at: 0)
             }
             return
         }
         let cursorX = convert(windowLocation, from: nil).x
         // The whole group travels together, so a drop onto any of its own
         // members is a no-op rather than a reorder.
-        let unitViews = dragUnitViews(for: sourceView)
-        sourceView.dragUnitCount = unitViews.count
+        let unitViews = sourceView.draggedViews
         let unitIdentities = Set(unitViews.map(ObjectIdentifier.init))
         guard
             let target = closestView(toX: cursorX, excludingBadge: excludeBadge),
@@ -910,14 +894,15 @@ final class LayoutBarContainer: NSView {
         // Blocks from another container are exempt: they have no slot here yet.
         let reach = target.frame.width / 2
         if !((target.frame.midX - reach) ... (target.frame.midX + reach)).contains(cursorX),
-           sourceView.oldContainerInfo?.container === self
+           sourceView.dragOrigin === self
         {
             return
         }
         guard let sourceIndex = arrangedViews.firstIndex(of: sourceView) else {
             // The block belongs to another container, so there is no old
             // position to vacate; it simply takes the target's slot.
-            arrangedViews.insert(contentsOf: unitViews, at: targetIndex)
+            let insertionIndex = cursorX >= target.frame.midX ? targetIndex + 1 : targetIndex
+            arrangedViews.insert(contentsOf: unitViews, at: insertionIndex)
             return
         }
         // Moving within this container: passing the target from the left lands

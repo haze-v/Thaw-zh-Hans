@@ -107,8 +107,10 @@ extension MenuBarItemManager {
                   self.appState?.menuBarManager.shouldDeferBarMutation != true
             else { return nil }
             let displayID = Bridging.getActiveMenuBarDisplayID() ?? CGMainDisplayID()
+            guard self.appState?.menuBarManager.sectionController.isNativeOverflowActive(on: displayID) != true else { return nil }
             let items = await MenuBarItem.getMenuBarItems(option: .activeSpace)
             let capture = await ScreenCapture.captureMenuBarHostingWindowAsync(displayID: displayID)
+            guard displayID == (Bridging.getActiveMenuBarDisplayID() ?? CGMainDisplayID()) else { return nil }
             return PostRestrictionReading(items: items, displayID: displayID, barCapture: capture)
         }
         return await RepairTurn.run(.postRestrictionRepair, on: repairs, read: read) { items, permit, writing in
@@ -141,6 +143,8 @@ extension MenuBarItemManager {
         }
         let controller = appState.menuBarManager.sectionController
 
+        let displayBeforeRead = Bridging.getActiveMenuBarDisplayID() ?? CGMainDisplayID()
+        if let readBeforeTurn, !readBeforeTurn.covers(displayBeforeRead) { return true }
         var liveItems = if let readBeforeTurn { readBeforeTurn.items } else { await MenuBarItem.getMenuBarItems(option: .activeSpace) }
         guard !arrangementIsManual, !Task.isCancelled else { return false }
         // Nothing is written yet. Step aside for the user; the next poll retries.
@@ -149,6 +153,10 @@ extension MenuBarItemManager {
         // A pulse can re-blank hiding-unsupported apps, so pulse only when
         // supported visible items are parked or blank.
         let displayID = Bridging.getActiveMenuBarDisplayID() ?? CGMainDisplayID()
+        guard displayID == displayBeforeRead, !ControlOrderRules.framesSpanSeveralBars(liveItems) else { return true }
+        // Overflow retains phantom AX frames. Pulsing or reseating those items
+        // can displace a different icon, so wait for a real restriction change.
+        guard !controller.isNativeOverflowActive(on: displayID) else { return false }
         // macOS can move the bar to a new main display after the display settle
         // ends. Until the cache follows, every visible item reads as parked.
         if let cachedDisplayID = itemDisplayID, cachedDisplayID != displayID {
@@ -232,6 +240,7 @@ extension MenuBarItemManager {
             await appState.imageCache.itemsRenderingBlank(among: prePulseOnBand, displayID: displayID)
         }
         guard !arrangementIsManual, !Task.isCancelled else { return false }
+        guard displayID == (Bridging.getActiveMenuBarDisplayID() ?? CGMainDisplayID()) else { return true }
         // Without a reading the blank check took a capture and can be slow. Still nothing written.
         guard !writing.userWorkIsWaiting else { return true }
         let needsPulse = !prePulseParked.isEmpty || !prePulseBlank.isEmpty

@@ -5,6 +5,7 @@
 //  Copyright (Thaw) © 2026 Toni Förster
 //  Licensed under the GNU GPLv3
 
+import CoreGraphics
 import Darwin
 import MenuBarModel
 
@@ -50,5 +51,20 @@ nonisolated enum StoreMovePeers {
                 || peer.tag.matchesIgnoringWindowID(target.tag)
                 || isDrawn(peer)
         }
+    }
+
+    /// A fixed system item still bounds the slot immediately before it.
+    static func leadingNeighbor(
+        of anchor: MenuBarItem,
+        moving item: MenuBarItem,
+        among items: [MenuBarItem],
+        on display: CGRect
+    ) -> MenuBarItem? {
+        guard anchor.isOnScreen, display.contains(anchor.bounds.center) else { return nil }
+        return items.filter {
+            !$0.hasSameIdentity(as: item) && !$0.isControlItem && !$0.isSystemClone && !$0.isNativeOverflowControl &&
+                $0.isOnScreen && !$0.bounds.isEmpty && display.contains($0.bounds.center) &&
+                $0.bounds.maxX <= anchor.bounds.minX
+        }.max { $0.bounds.maxX < $1.bounds.maxX }
     }
 }

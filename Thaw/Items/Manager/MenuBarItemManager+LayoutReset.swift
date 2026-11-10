@@ -109,6 +109,7 @@ extension MenuBarItemManager {
 
         guard configuration.enableMenuBarItemOverflow else {
             lastOverflowRebalance = nil
+            overflowDeficitsByDisplay.removeAll()
             return controller.setOverflowHiddenIdentifiers([])
         }
 
@@ -284,6 +285,8 @@ extension MenuBarItemManager {
             effectiveAvailableWidth = max(1, availableWidth - deficit)
         }
 
+        // The notch and native overflow budget are measured on this display.
+        var overflowDeficits = overflowDeficitsByDisplay[screen.displayID] ?? OverflowDeficits()
         // A notch-covered control proves the budget is too large; only concealing more items makes room, not order repair.
         let occlusionDeficit = overflowDeficits.updateNotchOcclusion(
             occludedControlWidth: items
@@ -324,6 +327,7 @@ extension MenuBarItemManager {
             visibleUIDs: Set(visibleLive.map(\.uniqueIdentifier)),
             overflowUIDs: overflowIdentifiers
         )
+        overflowDeficitsByDisplay[screen.displayID] = overflowDeficits
         if parkedDeficit.changed {
             MenuBarItemManager.diagLog.info(
                 "macOS 27 overflow: \(parkedWidths.count) visible item(s) left off the bar; deficit \(parkedDeficit.width ?? 0) pt (was \(parkedDeficit.previousWidth ?? 0))"

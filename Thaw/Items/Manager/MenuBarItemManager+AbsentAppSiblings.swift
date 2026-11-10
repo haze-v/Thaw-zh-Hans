@@ -13,7 +13,10 @@ extension MenuBarItemManager {
     /// undrawn items to that section, so none left behind keeps an app on the bar.
     func commitKeepingAppsTogether(_ items: [MenuBarItem], to section: MenuBarSection.Name, _ commit: () -> Void) {
         commit()
-        guard let menuBarManager = appState?.menuBarManager, menuBarManager.nativeAppHidingExperiment.isActive else { return }
+        guard let menuBarManager = appState?.menuBarManager,
+              menuBarManager.nativeAppHidingExperiment.isActive,
+              items.allSatisfy({ menuBarManager.sectionController.authoredSection(for: $0.uniqueIdentifier) == section })
+        else { return }
         let siblings = AbsentAppSiblings.carry(
             items, to: section, in: menuBarManager.sectionController, liveIdentifiers: Set(managedItems.map(\.uniqueIdentifier))
         )

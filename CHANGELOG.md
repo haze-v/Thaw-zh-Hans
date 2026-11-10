@@ -34,6 +34,12 @@ the items under New and Fixed.
 
 ### Fixed
 
+- Fix dragging a menu bar icon directly before a fixed system icon such as Control Center.
+
+- Refresh Layout on active display changes and promptly recompute overflow for the new display without treating its visible order as an edit. Defer repair when coordinates span displays or native overflow is active.
+
+- Keep dragged icons and groups together across Layout sections, restore the preview after cancellation, and verify section assignments before saving the drop order. Close inline reveals when switching to the Thaw Bar.
+
 - Added 273 Simplified Chinese translations missing from the source catalog, including sidebar groups, display settings, automation and recovery, and polished common interface labels.
 
 ## [3.0.0-beta.6] - 2026-11-03

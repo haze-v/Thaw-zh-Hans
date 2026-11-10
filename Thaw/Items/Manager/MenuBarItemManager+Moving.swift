@@ -331,11 +331,13 @@ extension MenuBarItemManager {
 
         // One walk serves the already-there check and the store write.
         let liveItems = livePeers
+        let fixedSystemAnchor = options.isUserInitiated && ExplicitLayoutEdit.isActive &&
+            Self.fixedTrailingSystemAnchor(for: destination)
         if MenuBarLayoutPlannerProvider.current.liveOrderSatisfiesDestination(
             items: liveItems,
             item: item,
             destination: destination,
-            experimentalSystemItemHiding: experimentalSystemItemHiding
+            experimentalSystemItemHiding: experimentalSystemItemHiding || fixedSystemAnchor
         ) {
             MenuBarItemManager.diagLog.debug("\(item.logString) is already at \(destination.logString); nothing to do")
             moveFulfilled = true
@@ -349,6 +351,7 @@ extension MenuBarItemManager {
             liveItems: liveItems,
             experimentalSystemItemHiding: experimentalSystemItemHiding,
             isUserInitiated: options.isUserInitiated,
+            fixedAnchorDisplay: fixedSystemAnchor ? CGDisplayBounds(resolvedDisplayID) : nil,
             permit: permit
         ) {
             moveMonitor.recordStoreMove(
@@ -2660,6 +2663,11 @@ extension MenuBarItemManager {
         return liveItems
     }
 
+    private static func fixedTrailingSystemAnchor(for destination: MoveDestination) -> Bool {
+        guard case let .leftOfItem(anchor) = destination else { return false }
+        return anchor.tag.namespace == .menuBarAgent && anchor.tag.isLayoutAnchoredSystemItem
+    }
+
     /// The cursor-free move: rewrite the agent's preferred-position weight.
     /// True only when the live order then satisfies destination, since the
     /// key spelling is uncertain; false leaves the move undone.
@@ -2670,6 +2678,7 @@ extension MenuBarItemManager {
         liveItems: [MenuBarItem],
         experimentalSystemItemHiding: Bool,
         isUserInitiated: Bool = false,
+        fixedAnchorDisplay: CGRect? = nil,
         permit: borrowing StoreWritePermit
     ) async throws -> Bool {
         guard !menuBarAgentIgnoresPreferredPositions else {
@@ -2742,7 +2751,21 @@ extension MenuBarItemManager {
                 section: { sectionController?.section(for: $0) ?? .visible }
             )
         }
-        if !storeMoved {
+        if let fixedAnchorDisplay {
+            let anchor = destination.targetItem
+            let peers = drawnPeers(liveItems).filter {
+                (sectionController?.section(for: $0) ?? .visible) == .visible
+            }
+            if let neighbor = StoreMovePeers.leadingNeighbor(of: anchor, moving: item, among: peers, on: fixedAnchorDisplay) {
+                storeMoved = MenuBarPositionStoreProvider.forLayoutEdit.move(
+                    item: item,
+                    between: neighbor,
+                    and: anchor,
+                    liveItems: liveItems,
+                    permit: permit
+                )
+            }
+        } else if !storeMoved {
             storeMoved = MenuBarPositionStoreProvider.forLayoutEdit.move(
                 item: item,
                 to: destination,
@@ -2780,7 +2803,7 @@ extension MenuBarItemManager {
                 items: items,
                 item: item,
                 destination: destination,
-                experimentalSystemItemHiding: experimentalSystemItemHiding
+                experimentalSystemItemHiding: experimentalSystemItemHiding || fixedAnchorDisplay != nil
             )
         }
         // One budget for the whole preferred-position phase, shared by the
@@ -2814,6 +2837,11 @@ extension MenuBarItemManager {
                 "Preferred-position move verified for \(item.logString) \(destination.logString)"
             )
             return true
+        }
+
+        if fixedAnchorDisplay != nil {
+            MenuBarItemManager.diagLog.warning("Move beside fixed system anchor did not verify for \(item.logString)")
+            return false
         }
 
         // A failed single-item write is not authority to replay the section's

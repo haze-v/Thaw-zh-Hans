@@ -221,7 +221,9 @@ extension MenuBarItemManager {
 
             // A sanity re-scan above can suspend while an owner exits. Check
             // again at publication so the old in-flight pass cannot undo purge.
-            guard layoutPublication.canPublish(generation: publicationGeneration) else {
+            guard layoutPublication.canPublish(generation: publicationGeneration),
+                  displayID == Bridging.getActiveMenuBarDisplayID()
+            else {
                 scheduleCoalescedCacheRerun()
                 return
             }
@@ -470,7 +472,9 @@ extension MenuBarItemManager {
             let items = await MenuBarItem.getMenuBarItems(option: .activeSpace)
             guard !Task.isCancelled else { return }
             let signature = MenuBarBackendProvider.current.itemCacheSignature(items) ?? []
-            guard signature != self.cacheCycleState.cachedItemSignature else {
+            guard self.itemDisplayID != Bridging.getActiveMenuBarDisplayID() ||
+                signature != self.cacheCycleState.cachedItemSignature
+            else {
                 // Bar has settled, stop the chain rather than recache no-op work.
                 return
             }
@@ -799,12 +803,26 @@ extension MenuBarItemManager {
             MenuBarItemManager.diagLog.debug("cacheItemsRegardless: cancelled or superseded after control item discovery")
             return
         }
+        guard displayID == Bridging.getActiveMenuBarDisplayID() else {
+            scheduleCoalescedCacheRerun()
+            return
+        }
 
-        // Partial inventory can populate the editor, but cannot authorize
-        // boundary repairs or replace saved order with retained geometry.
+        // A newly active display can have a different visible set due to its
+        // width and notch. Publish that set without restoring or mirroring order.
+        let displayChanged = itemDisplayID != nil && itemDisplayID != displayID
+        if displayChanged {
+            savedOrderMirrorGate.noteDisturbance()
+            MenuBarItemManager.diagLog.info("Active display changed; refreshing layout without rewriting order")
+        }
         lastKnownControlItems = CacheDividers.live(controlItems)
-        if !inventory.hasFreshKnownInventory {
+        if displayChanged || !inventory.hasFreshKnownInventory {
             await uncheckedCacheItems(items: items, controlItems: controlItems, displayID: displayID, publicationGeneration: publicationGeneration, observationOnly: true)
+            if displayChanged, inventory.hasFreshKnownInventory,
+               itemDisplayID == displayID, configuration.enableMenuBarItemOverflow
+            {
+                scheduleOverflowRebalance(cause: .nativeOverflowChanged, reason: .externalChange, immediate: true)
+            }
             return
         }
 

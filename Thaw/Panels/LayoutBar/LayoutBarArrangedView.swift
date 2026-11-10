@@ -17,14 +17,25 @@ class LayoutBarArrangedView: NSView {
         case collapsedGroup(members: [MenuBarItem])
     }
 
-    /// Temporary information retained while dragging between layout containers.
-    var oldContainerInfo: (container: LayoutBarContainer, index: Int)?
+    /// Capture the origin and the group before any destination changes the view tree.
+    private(set) weak var dragOrigin: LayoutBarContainer?
+    private var draggedSiblings: [LayoutBarArrangedView] = []
 
-    /// Capture the frozen source at drag start: superview disappears mid-drag and oldContainerInfo may never be set.
-    private weak var frozenSourceContainer: LayoutBarContainer?
+    private var draggedItemIndex = 0
 
-    /// Record block size each updated phase so rejected group drags restore every member, not just self.
-    var dragUnitCount = 1
+    var draggedViews: [LayoutBarArrangedView] {
+        var members = draggedSiblings
+        members.insert(self, at: draggedItemIndex)
+        return members
+    }
+
+    func captureDragOrigin(in container: LayoutBarContainer) {
+        guard dragOrigin == nil else { return }
+        let unit = container.dragUnitViews(for: self)
+        dragOrigin = container
+        draggedSiblings = unit.filter { $0 !== self }
+        draggedItemIndex = unit.firstIndex(of: self) ?? 0
+    }
 
     var hasContainer = false
 
@@ -73,52 +84,24 @@ extension LayoutBarArrangedView: NSDraggingSource {
     func draggingSession(_ session: NSDraggingSession, willBeginAt _: NSPoint) {
         let container = superview as? LayoutBarContainer
         container?.acceptsViewUpdates = false
-        frozenSourceContainer = container
+        if let container {
+            captureDragOrigin(in: container)
+        }
 
         session.animatesToStartingPositionsOnCancelOrFail = false
 
-        Task { @MainActor in
-            isDraggingPlaceholder = true
-        }
+        isDraggingPlaceholder = true
     }
 
     func draggingSession(_: NSDraggingSession, endedAt _: NSPoint, operation: NSDragOperation) {
-        let sourceContainer = oldContainerInfo?.container
-        let frozenContainer = frozenSourceContainer
-        let wasGroupDrag = dragUnitCount > 1
-        defer {
-            oldContainerInfo = nil
-            frozenSourceContainer = nil
-            dragUnitCount = 1
-        }
-
         isDraggingPlaceholder = false
-
-        // Failed drops never reach performDragOperation's thaw path; restore every potentially frozen container here.
-        // The captured origin covers missing superview and oldContainerInfo, preventing permanently frozen layout bars.
-        if operation == [] {
+        if operation.isEmpty {
             (superview as? LayoutBarContainer)?.acceptsViewUpdates = true
-            sourceContainer?.acceptsViewUpdates = true
-            frozenContainer?.acceptsViewUpdates = true
+            dragOrigin?.acceptsViewUpdates = true
         }
-
-        if isNewItemsBadge {
-            sourceContainer?.acceptsViewUpdates = true
-            sourceContainer?.rebuildViews()
-        }
-
-        if !hasContainer {
-            guard let (container, index) = oldContainerInfo else {
-                return
-            }
-            container.animatesNextLayoutPass = false
-            // Only self carries oldContainerInfo; rebuild from the unchanged cache to restore all removed group members.
-            if wasGroupDrag, container.appState != nil {
-                container.rebuildViews()
-                return
-            }
-            container.arrangedViews.insert(self, at: index)
-        }
+        dragOrigin = nil
+        draggedSiblings = []
+        draggedItemIndex = 0
     }
 }
 

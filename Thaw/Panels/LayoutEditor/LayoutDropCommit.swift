@@ -18,8 +18,8 @@ enum LayoutDropCommit {
         let target: MenuBarSection.Name
         let previousTargetOrder: [MenuBarItem]
         let targetOrder: [MenuBarItem]
-        /// Several separate items that land in targetOrder. Without it, several items are a group,
-        /// which lands in the target's stored order.
+        /// Multiple items with an explicit drop slot. A group dragged by its handle across
+        /// sections has no slot and lands in the target's stored order.
         var isBatch = false
     }
 

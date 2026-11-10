@@ -16,7 +16,7 @@ final class LayoutBarScrollView: NSScrollView {
 
     private(set) var selectionInteraction: LayoutSelectionInteraction?
 
-    /// Whether this section takes the selection being dragged over it, read once as the drag enters.
+    /// Whether the drag originated from a selection in this editor.
     private var takesDraggedSelection = false
 
     /// Redraws the bar's items when the selection changes.
@@ -118,7 +118,7 @@ extension LayoutBarScrollView: NSDraggingSource {
     }
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-        takesDraggedSelection = sender.draggingSource is LayoutBarScrollView && container?.acceptsSelection() == true
+        takesDraggedSelection = (sender.draggingSource as? LayoutBarScrollView)?.selection === selection && selection != nil
         return selectionDragOperation(sender)
     }
 
@@ -135,7 +135,7 @@ extension LayoutBarScrollView: NSDraggingSource {
     }
 
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-        guard takesDraggedSelection, let container else { return false }
+        guard takesDraggedSelection, let container, container.acceptsSelection() else { return false }
         container.groupDropMarkerX = nil
         container.dropSelection(at: sender.draggingLocation)
         return true
@@ -143,7 +143,7 @@ extension LayoutBarScrollView: NSDraggingSource {
 
     /// Shows where the selection would land, or the no-drop cursor when this section cannot take all of it.
     private func selectionDragOperation(_ sender: NSDraggingInfo) -> NSDragOperation {
-        guard takesDraggedSelection, let container else {
+        guard takesDraggedSelection, let container, container.acceptsSelection() else {
             container?.groupDropMarkerX = nil
             return []
         }

@@ -473,12 +473,15 @@ final class MenuBarManager {
         } refreshControls: { [weak self] in
             self?.updateControlItemStates()
         }
-        activeDisplayWatcher?.isNeeded = { [settings = appState.settings.displaySettings] in
-            settings.wideDisplayRule.isEnabled || settings.isAlwaysShowEnabledOnAnyDisplay
+        activeDisplayWatcher?.isNeeded = { [settings = appState.settings.displaySettings, navigation = appState.navigationState] in
+            navigation.isSettingsPresented || navigation.hasVisibleCaptureUI ||
+                settings.wideDisplayRule.isEnabled || settings.isAlwaysShowEnabledOnAnyDisplay
         }
-        activeDisplayWatcher?.onChange = { [weak self] in
+        activeDisplayWatcher?.onChange = { [weak self, weak itemManager = appState.itemManager] in
+            itemManager?.savedOrderMirrorGate.noteDisturbance()
             self?.synchronizeAlwaysShowHiddenItems()
             self?.updateControlItemStates()
+            Task { await itemManager?.cacheItemsRegardless(skipRecentMoveCheck: true) }
         }
         activeDisplayWatcher?.start()
 

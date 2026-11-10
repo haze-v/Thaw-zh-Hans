@@ -55,38 +55,33 @@ extension LayoutDropCommit {
             to: drop.target,
             orderedAs: drop.targetOrder
         ) {
-            if drop.items.count > 1, !drop.isBatch {
-                recorded = assignGroup(drop, appState: appState)
+            if let refusal = appState.menuBarManager.setSection(drop.target, items: drop.items, atomically: true) {
+                let sourceItems = appState.itemManager.managedItems(for: drop.source)
+                appState.layoutFeedback.post(
+                    LayoutBarFeedbackCenter.blockedGroupMove(
+                        groupName: MenuBarSearchItemActions.groupDisplayName(for: drop.items, in: sourceItems, appState: appState),
+                        section: drop.target,
+                        refusal: refusal
+                    )
+                )
                 return
             }
-            if let item = drop.items.first, drop.items.count == 1 {
-                controller.setSection(drop.target, item: item)
-            } else if let refusal = appState.menuBarManager.setSection(drop.target, items: drop.items, atomically: true) {
-                diagLog.warning("Batch move to \(drop.target.logString) refused: \(refusal)")
+            // Overflow and temporary reveals can change presentation without changing assignment.
+            guard drop.items.allSatisfy({ controller.authoredSection(for: $0.uniqueIdentifier) == drop.target }) else {
+                diagLog.warning("Assignment to \(drop.target.logString) was not confirmed; preserving the stored order")
+                if let item = drop.items.first {
+                    appState.layoutFeedback.post(LayoutBarFeedbackCenter.itemCannotMove(itemName: item.displayName, section: drop.target))
+                }
                 return
             }
-            controller.setSectionOrder(from: drop.targetOrder, for: drop.target)
-            appState.itemManager.scheduleSectionOrderApply(for: drop.target)
+            if drop.items.count == 1 || drop.isBatch {
+                controller.setSectionOrder(from: drop.targetOrder, for: drop.target)
+                appState.itemManager.scheduleSectionOrderApply(for: drop.target)
+            }
             recorded = true
         }
         await appState.itemManager.cacheItemsRegardless(skipRecentMoveCheck: true)
         return recorded
-    }
-
-    /// A group lands in the target's stored order, as it does from the item menu.
-    private static func assignGroup(_ drop: Drop, appState: AppState) -> Bool {
-        guard let refusal = appState.menuBarManager.setSection(drop.target, items: drop.items, atomically: true) else {
-            return true
-        }
-        let sourceItems = appState.itemManager.managedItems(for: drop.source)
-        appState.layoutFeedback.post(
-            LayoutBarFeedbackCenter.blockedGroupMove(
-                groupName: MenuBarSearchItemActions.groupDisplayName(for: drop.items, in: sourceItems, appState: appState),
-                section: drop.target,
-                refusal: refusal
-            )
-        )
-        return false
     }
 
     private static let diagLog = DiagLog(category: "LayoutDropCommit")

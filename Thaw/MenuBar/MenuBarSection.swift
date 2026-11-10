@@ -269,6 +269,7 @@ final class MenuBarSection {
             diagLog.info("show(\(name.logString)): the items do not fit inline; using the Thaw Bar")
         }
         if !forcingInline, useThawBar || overflowsInline, let screen = screenForThawBar {
+            closeInlineRevealBeforeThawBar(using: menuBarManager)
             for section in menuBarManager.sections {
                 section.desiredState = section.name == .visible ? .showSection : .hideSection
                 section.updateControlItemState(for: nil)
@@ -298,6 +299,16 @@ final class MenuBarSection {
         }
         refreshRevealedItemImages()
         startRehideChecks()
+    }
+
+    /// Stops an inline reveal before the floating bar takes over presentation.
+    private func closeInlineRevealBeforeThawBar(using manager: MenuBarManager) {
+        guard manager.sectionController.revealedSection != nil else { return }
+        if manager.shouldAlwaysShowHiddenItems {
+            manager.synchronizeAlwaysShowHiddenItems(closingSections: true)
+        } else {
+            manager.sectionController.hideRevealedSections()
+        }
     }
 
     /// Capture glyphs while the section is revealed to replace app-icon fallbacks in layout and search.
